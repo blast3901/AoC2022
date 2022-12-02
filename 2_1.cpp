@@ -22,7 +22,7 @@ int winState(const string &round) {
 }
 
 int main() {
-    ifstream input(R"(C:\Users\dbdan\Desktop\Coding\AoC\Day2\input.txt)");
+    ifstream input("input.txt");
     string rounds[2500];
     for (string &round: rounds) {
         getline(input, round);
