@@ -19,7 +19,7 @@ int main() {
         elfCals[i] = 0;
     }
     
-    int j = 0;
+    int j{};
     for (string& line : lines) {
         if(line.empty()) {
             ++j;
