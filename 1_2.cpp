@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     string lines[2254];
-    ifstream input (R"(C:\Users\dbdan\Desktop\Coding\AoC\Day1\input.txt)");
+    ifstream input ("input.txt");
     int elfCount = 1;
     for (string& line : lines) {
         getline(input,line);
@@ -30,16 +30,10 @@ int main() {
 
     int max1{}, max2{}, max3{};
     for (int i = 0; i < elfCount; i++){
-       if (elfCals[i] > max1) {
-            max1 = elfCals[i];
-       }
-       if (elfCals[i] > max2 && elfCals[i] < max1) {
-            max2 = elfCals[i];
-       }
-       if (elfCals[i] > max3 && elfCals[i] < max2) {
-            max3 = elfCals[i];
-       }
+       if (elfCals[i] > max1) max1 = elfCals[i];
+       if (elfCals[i] > max2 && elfCals[i] < max1) max2 = elfCals[i];
+       if (elfCals[i] > max3 && elfCals[i] < max2) max3 = elfCals[i];
     }
-    cout << max1 + max2 + max3 << endl;
+    cout << max1 << " " << max1 + max2 + max3 << endl;
     return 0;
 }
