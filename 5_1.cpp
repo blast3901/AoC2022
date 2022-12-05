@@ -46,7 +46,6 @@ void executeCommands(vector<vector<int>> commands, vector<vector<char>> &stacks)
         int from = commands[i][1] - 1;
         int to = commands[i][2] - 1;
         for (int j = 0; j < commands[i][0]; j++) {
-            //if (stacks[from].empty()) continue;
             stacks[to].push_back(stacks[from].back());
             stacks[from].pop_back();
         }
